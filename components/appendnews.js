@@ -1,6 +1,7 @@
 
     function appendNews(data, location){
         location.innerHTML = "";
+        console.log(data);
         data.map((el)=>{
             //Destructuring of object to get value
 

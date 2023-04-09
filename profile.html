@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/faq.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <title>sportsverse</title>
+</head>
+<body>
+    <div id="navbar_container"></div>
+    <div id="profile_data">
+        <div id="profile_image">
+        </div>
+        <div id="profile_name" class="detail_design">
+            Michael Jordan
+        </div>
+        <div id="game_name" class="detail_design">
+            Basketball
+        </div>
+        <div id="games_played" class="detail_design">
+            Leagues Played - 100
+        </div>
+        <div id="games_won" class="detail_design">
+            Leagues won - 90
+        </div>
+        <div id="player_stats" class="detail_design">
+            Player Stats: Good
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+</body>
+<style>
+    .detail_design{
+        font-size: 1.5rem;
+        background-color: lightblue;
+        font-weight: 600;
+    }
+    #profile_image{
+        align-items: center;
+        background-image: url("./static/profile.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 10vh;
+        width: 10%;
+    }
+    #profile_data{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 60vh;
+        width: 100%;
+        justify-content: space-around;
+    }
+</style>
+<script type="module">
+    import navbar from "./components/navbar.js"
+    import footer from "./components/footer.js"
+
+    let container = document.querySelector("#footer");
+    container.innerHTML = footer();
+
+    let navbar_container = document.getElementById("navbar_container");
+    navbar_container.innerHTML = navbar();
+</script>

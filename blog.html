@@ -209,16 +209,23 @@
 
 
         <!-- Footer start -->
-            <div class="footer">
-                <div>
-                    © 2019 TechMash Solutions. All Rights Reserved.
-                </div>
-            </div>
+            <div id="footer"></div>
         <!-- Footer End-->
 
     </div>
 
 
 </body>
-</html>
+</html>     
+<script type="module">
+    import navbar from "./components/navbar.js"
+    import footer from "./components/footer.js"
+
+    let container = document.querySelector("#footer");
+    container.innerHTML = footer();
+
+    let navbar_container = document.getElementById("navbar_container");
+    navbar_container.innerHTML = navbar();
+
+</script>
 <script src="./scripts/blog.js" type="module"></script>
